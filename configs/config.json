@@ -1,0 +1,35 @@
+{
+  "model_module_name": "resnet_module",
+  "model_net_name": "resnet50",
+  "gpu_id": "3",
+  "async_loading": true,
+  "is_tensorboard": true,
+  "evaluate_before_train": true,
+  "shuffle": true,
+  "data_aug": true,
+
+  "num_epochs": 600,
+  "img_height": 224,
+  "img_width": 224,
+  "num_channels": 3,
+  "num_classes": 61,
+  "batch_size": 1,
+  "dataloader_workers": 10,
+  "learning_rate": 1e-4,
+  "learning_rate_decay": 0.5,
+  "learning_rate_decay_epoch": 100,
+
+  "train_mode": "fromscratch",
+  "file_label_separator": "----",
+  "pretrained_path": "/home1/sas/pretrain_model/pytorch",
+  "pretrained_file": "resnet50-19c8e357.pth",
+  "save_path": "/home1/sas/results_model/pytorch/10",
+  "save_name": "model.pth",
+  "train_eval_best":"train_eval_best.pth",
+  "val_eval_best":"val_eval_best.pth",
+
+  "val_data_root_dir": "/home1/sas/datasets/ai_challenger_pdr2018_validationset_20180905/AgriculturalDisease_validationset/images",
+  "train_data_root_dir": "/home1/sas/datasets/ai_challenger_pdr2018_trainingset_20180905/AgriculturalDisease_trainingset/images",
+  "val_data_file": "/home1/sas/datasets/ai_challenger_pdr2018_validationset_20180905/AgriculturalDisease_validationset/AgriculturalDisease_validation_annotations.json",
+  "train_data_file": "/home1/sas/datasets/ai_challenger_pdr2018_trainingset_20180905/AgriculturalDisease_trainingset/AgriculturalDisease_train_annotations.json"
+}
